@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/gamepage.css" />
+
+    <!-- JavaScript -->
+    <script src="../../../js/mobileNav.js" defer></script>
+    <script type="module" src="./../../../js/game.js"></script>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+        <link rel="manifest" href="../assets/images/site.webmanifest">
+    <title>Yathzee</title>
+  </head>
+  <body>
+    <header>
+      
+      <!-- <a class="buttonStyle" href="">Rules</a>
+      <h1 class="mobileTitle ir">Yahtzee</h1>
+      <a class="buttonStyle" href="">Score</a> -->
+    </header>
+    <main>
+      <section class="rulesBoard scroll">
+        <section id="rules" class="scroll">
+          <h2>Combinations</h2>
+          <dl>
+            <dt>Aces</dt>
+            <dd>
+              <p>Aces and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-1.svg"
+                  alt="White die with 1 eye"
+                />
+                <img
+                  src="../assets/images/die-1.svg"
+                  alt="White die with 1 eye"
+                />
+                <img
+                  src="../assets/images/die-1.svg"
+                  alt="White die with 1 eye"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Twos</dt>
+            <dd>
+              <p>Twos and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Threes</dt>
+            <dd>
+              <p>Threes and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Fours</dt>
+            <dd>
+              <p>Fours and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Fives</dt>
+            <dd>
+              <p>Fives and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Sixes</dt>
+            <dd>
+              <p>Sixes and any combination</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-6.svg"
+                  alt="White die with 6 eyes"
+                />
+                <img
+                  src="../assets/images/die-6.svg"
+                  alt="White die with 6 eyes"
+                />
+                <img
+                  src="../assets/images/die-6.svg"
+                  alt="White die with 6 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Three of a kind</dt>
+            <dd>
+              <p>At least 3 dices with the same amount of eyes</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Four of a kind</dt>
+            <dd>
+              <p>At least 4 dices with the same amount of eyes</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Full House</dt>
+            <dd>
+              <p>
+                At least 3 dices with the same amount of eyes and 2 dices with
+                the same eyes but a different number of eyes then the 3 other
+                dices
+              </p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Small Street</dt>
+            <dd>
+              <p>4 sequential dices</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Large Street</dt>
+            <dd>
+              <p>5 sequential dices</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-4.svg"
+                  alt="White die with 4 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-6.svg"
+                  alt="White die with 6 eyes"
+                />
+              </div>
+            </dd>
+            <dt>Yathzee</dt>
+            <dd>
+              <p>5 dices with the same amount of eyes</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+              </div>
+            </dd>
+            <dt>change</dt>
+            <dd>
+              <p>Any combination of eyes</p>
+              <div class="diesListing">
+                <img
+                  src="../assets/images/die-1.svg"
+                  alt="White die with 1 eyes"
+                />
+                <img
+                  src="../assets/images/die-2.svg"
+                  alt="White die with 2 eyes"
+                />
+                <img
+                  src="../assets/images/die-3.svg"
+                  alt="White die with 3 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+                <img
+                  src="../assets/images/die-5.svg"
+                  alt="White die with 5 eyes"
+                />
+              </div>
+            </dd>
+          </dl>
+        </section>
+        <hr />
+        <a
+          href="https://en.wikipedia.org/wiki/Yahtzee"
+          class="buttonStyle"
+          type="button"
+          target="_blank"
+          >Rules</a
+        >
+      </section>
+
+      <section class="gameboard">
+        <button class="ir sideMenuRules fitGrid desktophidden">Show rules</button>
+        <button class="ir sideMenuScore fitGrid desktophidden">Show rules</button>
+        <img
+          src="../assets/images/Yathzee_Title.svg"
+          alt="Yathzee Title"
+          id="imgBackground"
+          class="fitGrid"
+        />
+        <img
+          src="../assets/images/1.png"
+          alt="dice 1 value:"
+          class="fitGrid"
+          id="dice_1"
+        />
+
+        <img
+          src="../assets/images/2.png"
+          alt="dice 2 value:"
+          class="fitGrid"
+          id="dice_2"
+        />
+
+        <img
+          src="../assets/images/3.png"
+          alt="dice 3 value:"
+          class="fitGrid"
+          id="dice_3"
+        />
+
+        <img
+          src="../assets/images/4.png"
+          alt="dice 4 value:"
+          class="fitGrid"
+          id="dice_4"
+        />
+
+        <img
+          src="../assets/images/5.png"
+          alt="dice 5 value:"
+          class="fitGrid"
+          id="dice_5"
+        />
+        <button id="diceCup" class="backgroundImg ir" type="button"></button>
+        <span></span>
+      </section>
+      <section class="scoreboard scroll">
+        <h2 id="playerName">Yathzee</h2>
+        <hr />
+        <section id="upperSection">
+          <h3>Upper Section</h3>
+          <ul>
+            <li>
+              <div>
+                <img src="../assets/images/die-1.svg" alt="die, ace" />
+                <p>Aces</p>
+              </div>
+              <button id="buttonAces"></button>
+            </li>
+            <li>
+              <div>
+                <img src="../assets/images/die-2.svg" alt="die, Two" />
+                <p>Twos</p>
+              </div>
+              <button id="buttonTwos"></button>
+            </li>
+            <li>
+              <div>
+                <img src="../assets/images/die-3.svg" alt="die, Three" />
+                <p>Threes</p>
+              </div>
+              <button id="buttonThrees"></button>
+            </li>
+            <li>
+              <div>
+                <img src="../assets/images/die-4.svg" alt="die, Four" />
+                <p>Fours</p>
+              </div>
+              <button id="buttonFours"></button>
+            </li>
+            <li>
+              <div>
+                <img src="../assets/images/die-5.svg" alt="die, Five" />
+                <p>Fives</p>
+              </div>
+              <button id="buttonFives"></button>
+            </li>
+            <li>
+              <div>
+                <img src="../assets/images/die-6.svg" alt="die, Six" />
+                <p>Sixes</p>
+              </div>
+              <button id="buttonSixes"></button>
+            </li>
+
+            <li class="alignRight">
+              <p class="boldPrinted">Total</p>
+              <button id="buttonSubTotalUpper"></button>
+            </li>
+            <li class="alignRight">
+              <p>63+, scores a</p>
+              <p class="boldPrinted">35 bonus</p>
+              <button id="buttonBonus"></button>
+            </li>
+            <li class="alignRight">
+              <p class="boldPrinted">Total of Upper Section</p>
+              <button class="buttonTotalUpper"></button>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <section id="lowerSection">
+          <h3>Lower Section</h3>
+          <ul>
+            <li>
+              <p>3 of a kind</p>
+              <div>
+                <p class="boldPrinted">Total of all dice</p>
+                <button id="button3OAK"></button>
+              </div>
+            </li>
+            <li>
+              <p>4 of a kind</p>
+              <div>
+                <p class="boldPrinted">Total of all dice</p>
+                <button id="button4OAK"></button>
+              </div>
+            </li>
+            <li>
+              <p>Full House</p>
+              <div>
+                <p class="boldPrinted">25</p>
+                <button id="buttonFullHouse"></button>
+              </div>
+            </li>
+            <li>
+              <p>Small Street</p>
+              <div>
+                <p class="boldPrinted">30</p>
+                <button id="buttonSmallStreet"></button>
+              </div>
+            </li>
+            <li>
+              <p>Large Street</p>
+              <div>
+                <p class="boldPrinted">40</p>
+                <button id="buttonLargeStreet"></button>
+              </div>
+            </li>
+            <li>
+              <p class="boldPrinted redText">Yathzee</p>
+              <div>
+                <p class="boldPrinted">50</p>
+                <button id="buttonYathzee"></button>
+              </div>
+            </li>
+            <li>
+              <p>Change</p>
+              <div>
+                <p class="boldPrinted">Total of all dice</p>
+                <button id="buttonChange"></button>
+              </div>
+            </li>
+            <li class="alignRight">
+              <p class="boldPrinted">Total of Lower Section</p>
+              <button id="buttonTotalLower"></button>
+            </li>
+            <li class="alignRight">
+              <p class="boldPrinted">Total of Upper Section</p>
+              <button class="buttonTotalUpper"></button>
+            </li>
+            <li class="alignRight">
+              <p class="boldPrinted">Grand Total</p>
+              <button id="buttonGrandTotal"></button>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="playerWon">
+        <h2>Congrats!</h2>
+        <p id="winner">Player Won 🎉</p>
+        <a href="../index.html" class="buttonHome">Back to home</a>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

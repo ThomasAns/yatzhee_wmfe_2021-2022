@@ -1,0 +1,84 @@
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1280px;
+}
+
+:root {
+  --white: #F4F4F4;
+  --black: #0d0d0d;
+  --light-grey: #e1e1e1;
+  --dark-grey: #949494;
+  --red: #e50d0d;
+  --dark-red:rgb(123, 0, 0);
+  --gold: #e1c00b;
+  --accent: var(--gold);
+  --primary: var(--red);
+  --bg: var(--white);
+}
+/* ===========================================
+     Helpers
+     =========================================== */
+
+.structural {
+  position: absolute;
+  left: -9999px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ir {
+  display: block;
+  background-size: 100%;
+  text-indent: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute !important;
+  visibility: hidden !important;
+  z-index: -1 !important;
+}
+
+.desktophidden {
+  display: none !important;
+}
+
+@media (max-width: 62.5em) {
+  .hiddenMobile {
+    position: absolute !important;
+    visibility: hidden !important;
+    z-index: -1 !important;
+  }
+  .desktophidden {
+    display: initial !important;
+  }
+}
+
+/* ===========================================
+     Common css
+     =========================================== */
+
+body{
+    background-color: var(--bg);
+}

@@ -1,0 +1,592 @@
+/* header {
+    display: none;
+} */
+
+main {
+    display: flex;
+    flex-direction: row;
+    font-size: 160%;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.sideMenuRules {
+    display: none;
+}
+
+.sideMenuScore {
+    display: none;
+}
+
+/* section styling */
+.scoreboard,
+.rulesBoard {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: solid 0.25rem;
+    border-radius: 0.6rem;
+    min-width: 250px;
+    width: 15%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 5;
+    background: var(--white);
+}
+
+.gameboard {
+    display: grid;
+    margin: 0 auto;
+    border: solid var(--gold) 0.25rem;
+    border-radius: 0.6rem;
+    width: 65%;
+    height: 100%;
+    background-color: var(--primary);
+    z-index: 4;
+    grid-template-columns: repeat(200, 1fr);
+    grid-template-rows: repeat(200, 1fr);
+}
+
+/* rulesBoard */
+.rules {
+    height: 90%;
+}
+
+.buttonStyle {
+    border-radius: 0.7rem;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: var(--black);
+    font-size: 22px;
+    text-align: center;
+    margin: auto 1rem;
+    padding: 0.5rem;
+    box-shadow: -6px -6px 10px rgb(255 255 255 / 80%);
+    height: 8rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--dark-grey);
+    margin: 1rem;
+    font-weight: bold;
+}
+
+/* gameboard */
+
+.fitGrid {
+    width: 100%;
+    HEIGHT: 100%;
+    object-fit: contain;
+}
+
+.dicesStart {
+    grid-column-start: 170;
+    grid-column-end: 180;
+    grid-row-start: 170;
+    grid-row-end: 190;
+}
+
+.gameboard #diceCup {
+    grid-column-start: 150;
+    grid-column-end: 200;
+    grid-row-start: 160;
+    grid-row-end: 200;
+}
+
+#diceCup:hover {
+    animation: effect 0.35s infinite;
+}
+
+@keyframes effect {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(-4px) rotate(-4deg);
+    }
+
+    40% {
+        transform: translateX(-2px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translateX(4px) rotate(4deg);
+    }
+
+    80% {
+        transform: translateX(2px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+.gameboard span {
+    grid-column-start: 10;
+    grid-column-end: 124;
+    grid-row-start: 170;
+    grid-row-end: 200;
+    background-color: var(--dark-red);
+    border: solid var(--accent) 0.25rem;
+    border-radius: 2rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.gameboard #imgBackground {
+    grid-column-start: 60;
+    grid-column-end: 140;
+    grid-row-start: 70;
+    grid-row-end: 110;
+    z-index: -1;
+}
+
+#diceCup {
+    border: none;
+}
+
+/* scoreboard */
+.scoreboard button {
+    display: flex;
+    width: 5rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard ul {
+    padding: 0;
+}
+
+.scoreboard ul li {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.scoreboard ul li p {
+    margin: 0.4rem;
+}
+
+.scoreboard ul li img {
+    margin-left: 0.4rem;
+}
+
+.scoreboard ul li div {
+    display: flex;
+}
+
+/*Classes*/
+.alignRight {
+    justify-content: flex-end !important;
+}
+
+.boldPrinted {
+    font-weight: bold;
+}
+
+.redText {
+    color: var(--red);
+}
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.backgroundImg {
+    background: transparent url('../assets/images/DiceCup.png') no-repeat center;
+    width: 104px;
+    height: 133px;
+}
+
+/*Titels*/
+dt {
+    margin: 0 1.5rem;
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 1.5rem;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+h3 {
+    text-align: left;
+    margin-left: 0.4rem;
+    font-size: 20px;
+    margin: 1rem;
+}
+
+/*Lines in scoreboard*/
+hr {
+    border: 0.12rem solid;
+    background-color: var(--black);
+    width: 100%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+    .rulesBoard {
+        display: none;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    .gameboard #diceCup {
+        grid-column-start: 150;
+        grid-row-start: 150;
+    }
+
+    .sideMenuRules {
+        /* arrow icon toevoegen js menu uitklappen*/
+        display: block;
+        background: transparent url(../assets/images/menuArrow.svg) no-repeat center;
+        border: none;
+        grid-column-start: 1;
+        grid-column-end: 30;
+        grid-row-start: 85;
+        grid-row-end: 115;
+    }
+
+    .sideMenuScore {
+        display: none;
+        background: transparent url(../assets/images/menuArrow.svg) no-repeat center;
+        border: none;
+        transform: rotate(180deg);
+        grid-column-start: 171;
+        grid-column-end: 200;
+        grid-row-start: 85;
+        grid-row-end: 115;
+    }
+
+    .rulesBoardActive {
+        display: unset !important;
+        position: unset;
+    }
+
+    .scoreBoardActive {
+        display: unset;
+        position: unset;
+    }
+
+    .rulesBoardUnActive {
+        display: none;
+    }
+
+    .scoreBoardUnActive {
+        display: none;
+    }
+
+}
+
+
+
+.dice1Locked {
+    grid-column-start: 20;
+    grid-column-end: 33;
+    grid-row-start: 175;
+    grid-row-end: 200;
+}
+
+.dice2Locked {
+    grid-column-start: 40;
+    grid-column-end: 53;
+    grid-row-start: 175;
+    grid-row-end: 200;
+}
+
+.dice3Locked {
+    grid-column-start: 60;
+    grid-column-end: 73;
+    grid-row-start: 175;
+    grid-row-end: 200;
+}
+
+.dice4Locked {
+    grid-column-start: 80;
+    grid-column-end: 93;
+    grid-row-start: 175;
+    grid-row-end: 200;
+}
+
+.dice5Locked {
+    grid-column-start: 100;
+    grid-column-end: 113;
+    grid-row-start: 175;
+    grid-row-end: 200;
+}
+
+
+.dice1Field {
+    grid-column-start: 80;
+    grid-column-end: 103;
+    grid-row-start: 20;
+    grid-row-end: 45;
+}
+
+.dice2Field {
+    grid-column-start: 65;
+    grid-column-end: 87;
+    grid-row-start: 42;
+    grid-row-end: 67;
+}
+
+.dice3Field {
+    grid-column-start: 112;
+    grid-column-end: 135;
+    grid-row-start: 84;
+    grid-row-end: 109;
+}
+
+.dice4Field {
+    grid-column-start: 80;
+    grid-column-end: 103;
+    grid-row-start: 120;
+    grid-row-end: 145;
+}
+
+.dice5Field {
+    grid-column-start: 160;
+    grid-column-end: 183;
+    grid-row-start: 50;
+    grid-row-end: 75;
+}
+
+.buttonHome {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 2em;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 1rem;
+    border: solid 0.2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background-color: var(--red);
+
+    box-shadow: 3px 5px 20px rgba(255, 255, 255, 0.4);
+}
+
+.buttonHome:hover {
+    box-shadow: 5px 10px 40px rgba(255, 255, 255, 0.4);
+    transform: translateY(-0.15em);
+    transition: all 0.5s ease-in-out;
+}
+
+#playerWon {
+     visibility: hidden; 
+    position: absolute;
+    top: 35%;
+    left: 25%;
+
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    background-color: var(--dark-red);
+    color: var(--white);
+    border: 0.2em solid var(--gold);
+    border-radius: 0.6em;
+    backdrop-filter: blur(0.3em);
+    box-shadow: 3px 5px 20px var(--black);
+}
+#playerWon>h2 {
+    font-size: 40px;
+}
+
+#playerWon>p {
+    font-size: 25px;
+}
+@media only screen and (max-width: 700px) {
+    .sideMenuRules {
+        /* arrow icon toevoegen js menu uitklappen*/
+        display: block;
+        background: transparent url(../assets/images/menuArrow.svg) no-repeat center;
+        border: none;
+        grid-column-start: 1;
+        grid-column-end: 30;
+        grid-row-start: 85;
+        grid-row-end: 115;
+    }
+
+    .sideMenuScore {
+        display: block;
+        background: transparent url(../assets/images/menuArrow.svg) no-repeat center;
+        border: none;
+        transform: rotate(180deg);
+        grid-column-start: 171;
+        grid-column-end: 200;
+        grid-row-start: 85;
+        grid-row-end: 115;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rulesBoardActive {
+        display: unset !important;
+        position: absolute;
+        left: 0;
+        width: 85% !important;
+    }
+
+    .scoreBoardActive {
+        display: unset !important;
+        position: absolute;
+        right: 0;
+        width: 85% !important;
+    }
+
+    .rulesBoardUnActive {
+        display: none;
+    }
+
+    .scoreBoardUnActive {
+        display: none;
+    }
+
+    .mobileTitle {
+        background: transparent url('../assets/images/Yathzee_Title.svg') no-repeat center;
+        font-size: 30px;
+        margin: 0;
+        background-size: 100%;
+        padding: 1rem;
+    }
+
+
+    .sideMenuScore {
+        display: block;
+    }
+
+    .rulesBoard {
+        display: none;
+    }
+
+    .scoreboard {
+        display: none;
+    }
+
+
+    .dicesStart {
+        grid-row-start: 130;
+        grid-row-end: 140;
+    }
+
+
+
+    .gameboard #diceCup {
+        grid-column-start: 140;
+        grid-row-start: 120;
+        background-size: 100%;
+    }
+
+    .gameboard span {
+
+        grid-column-end: 190;
+    }
+
+    .gameboard {
+        width: 100%;
+    }
+
+    .dice1Locked {
+        grid-column-start: 20;
+        grid-column-end: 43;
+        grid-row-start: 175;
+        grid-row-end: 200;
+    }
+
+    .dice2Locked {
+        grid-column-start: 50;
+        grid-column-end: 73;
+        grid-row-start: 175;
+        grid-row-end: 200;
+    }
+
+    .dice3Locked {
+        grid-column-start: 80;
+        grid-column-end: 103;
+        grid-row-start: 175;
+        grid-row-end: 200;
+    }
+
+    .dice4Locked {
+        grid-column-start: 110;
+        grid-column-end: 133;
+        grid-row-start: 175;
+        grid-row-end: 200;
+    }
+
+    .dice5Locked {
+        grid-column-start: 140;
+        grid-column-end: 163;
+        grid-row-start: 175;
+        grid-row-end: 200;
+    }
+
+    #playerWon>h2 {
+        font-size: 20px;
+    }
+    
+    #playerWon>p {
+        font-size: 15px;
+    }
+
+
+    .buttonHome {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+}
+
+
+
+
+
+@keyframes rollDices {
+    0% {
+        width: 0%;
+        height: auto;
+        transform: translateY(0);
+    }
+
+    25% {
+        width: 25%;
+        transform: translateY(-50px);
+    }
+
+    50% {
+        width: 50%;
+        transform: translateY(0);
+    }
+
+    75% {
+        width: 75%;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        width: 100%;
+        transform: translateY(0);
+        transition: transform 3s ease-in-out;
+    }
+}

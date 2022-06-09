@@ -1,0 +1,42 @@
+body {
+    background-color: var(--red);
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    background: transparent url('../assets/images/Yathzee_Title.svg') no-repeat center;
+    max-width: 100%;
+    width: 70%;
+    height: 60vh;
+    z-index: 1;
+}
+.title a {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 3vw;
+    color: var(--black);
+    text-decoration: none;
+    padding: 2vw;
+    border: solid 0.2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+
+    box-shadow: 3px 5px 20px rgba(255, 255, 255, 0.4);
+}
+.title a:hover {
+    box-shadow: 5px 10px 40px rgba(255, 255, 255, 0.4);
+    transform: translateY(-0.15em);
+    transition: all 0.5s ease-in-out;
+}
+.background {
+    position: absolute;
+    max-width: 100%;
+    width: 25%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+}

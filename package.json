@@ -1,0 +1,26 @@
+{
+  "name": "yatzhee_wmfe_2021-2022",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel app/public/index.html",
+    "build": "parcel build app/public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ikdoeict/tim.vekeman/yatzhee_wmfe_2021-2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ikdoeict/tim.vekeman/yatzhee_wmfe_2021-2022/issues"
+  },
+  "homepage": "https://gitlab.com/ikdoeict/tim.vekeman/yatzhee_wmfe_2021-2022#readme",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
